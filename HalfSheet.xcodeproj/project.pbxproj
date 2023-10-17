@@ -11,6 +11,7 @@
 		E465A7F52ADEEDD90065A616 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E465A7F42ADEEDD90065A616 /* ContentView.swift */; };
 		E465A7F72ADEEDDA0065A616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E465A7F62ADEEDDA0065A616 /* Assets.xcassets */; };
 		E465A7FA2ADEEDDA0065A616 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E465A7F92ADEEDDA0065A616 /* Preview Assets.xcassets */; };
+		E465A8022ADEEF6B0065A616 /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = E465A8012ADEEF6B0065A616 /* HalfASheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E465A8022ADEEF6B0065A616 /* HalfASheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = HalfSheet;
+			packageProductDependencies = (
+				E465A8012ADEEF6B0065A616 /* HalfASheet */,
+			);
 			productName = HalfSheet;
 			productReference = E465A7EF2ADEEDD90065A616 /* HalfSheet.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = E465A7E62ADEEDD90065A616;
+			packageReferences = (
+				E465A8002ADEEF6B0065A616 /* XCRemoteSwiftPackageReference "HalfASheet" */,
+			);
 			productRefGroup = E465A7F02ADEEDD90065A616 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E465A8002ADEEF6B0065A616 /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/franklynw/HalfASheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E465A8012ADEEF6B0065A616 /* HalfASheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E465A8002ADEEF6B0065A616 /* XCRemoteSwiftPackageReference "HalfASheet" */;
+			productName = HalfASheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E465A7E72ADEEDD90065A616 /* Project object */;
 }
