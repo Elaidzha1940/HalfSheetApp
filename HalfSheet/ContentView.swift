@@ -21,8 +21,8 @@ struct ContentView: View {
             Button(action: {
                 isShowing.toggle()
             }, label: {
-                Text("Open")
-                    .frame(width: 100, height: 45)
+                Text("Open Sheet")
+                    .frame(width: 155, height: 45)
                     .font(.system(size: 25, weight: .bold, design: .rounded))
                     .foregroundStyle(.black)
                     .background(Color.gray)
@@ -30,7 +30,6 @@ struct ContentView: View {
                     .padding()
                 
             })
-            
             
             HalfASheet(isPresented: $isShowing, title: "Rotation") {
                 VStack(spacing: 20) {
@@ -51,8 +50,12 @@ struct ContentView: View {
                 .padding()
             }
             .height(.proportional(0.45))
+            .closeButtonColor(UIColor.white)
+            //.backgroundColor(.white)
+            .contentInsets(EdgeInsets(top: 50, leading: 10, bottom: 30, trailing: 10))
         }
         .preferredColorScheme(.dark)
+        .ignoresSafeArea()
     }
 }
 
