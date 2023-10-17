@@ -28,27 +28,29 @@ struct ContentView: View {
                     .background(Color.gray)
                     .cornerRadius(20)
                     .padding()
-
+                
             })
-        }
-        
-        HalfASheet(isPresented: $isShowing, title: "Rotation") {
-            VStack(spacing: 20) {
-                Image(systemName: "tortoise.fill")
-                    .foregroundColor(.white)
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
-                    .rotation3DEffect(
-                        Angle(degrees: amount),
-                        axis: (x: -10, y: 1, z: 10)
-                    )
-                
-                Slider(value: $amount, in: 0...300)
-                    .accentColor(.gray)
-                
-                Text("Degrees: \(Int(amount))")
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
+            
+            
+            HalfASheet(isPresented: $isShowing, title: "Rotation") {
+                VStack(spacing: 20) {
+                    Image(systemName: "tortoise.fill")
+                        .foregroundColor(.white)
+                        .font(.system(size: 50, weight: .bold, design: .rounded))
+                        .rotation3DEffect(
+                            Angle(degrees: amount),
+                            axis: (x: 0, y: 360, z: 0)
+                        )
+                    
+                    Slider(value: $amount, in: 0...360)
+                        .accentColor(.gray)
+                    
+                    Text("Degrees: \(Int(amount))")
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                }
+                .padding()
             }
-            //.padding()
+            .height(.proportional(0.45))
         }
         .preferredColorScheme(.dark)
     }
